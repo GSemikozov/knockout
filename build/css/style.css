@@ -1,0 +1,656 @@
+@font-face {
+  font-family: Segoeuil;
+  src: url(../fonts/segoeuil.woff);
+  src: url(../fonts/segoeuil.ttf); }
+
+@font-face {
+  font-family: Seguibl;
+  src: url(../fonts/seguibl.woff);
+  src: url(../fonts/seguibl.ttf); }
+
+@font-face {
+  font-family: Seguili;
+  src: url(../fonts/seguili.woff);
+  src: url(../fonts/seguili.ttf); }
+
+body {
+  font-family: Seguibl, sans-serif;
+  height: 100%; }
+
+.main-page header {
+  display: none; }
+  .main-page header section {
+    position: relative; }
+    .main-page header section #close {
+      cursor: pointer;
+      position: absolute;
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+      right: 0;
+      top: 20px; }
+      .main-page header section #close img {
+        max-width: 50px; }
+      .main-page header section #close:hover {
+        opacity: .5; }
+  .main-page header .bg {
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .main-page header .form-wrap {
+    max-width: 475px;
+    width: 100%;
+    margin: 0 auto; }
+  .main-page header h1 {
+    color: #ecedec;
+    text-transform: uppercase;
+    font-size: 74px;
+    letter-spacing: -3px; }
+  .main-page header h2 {
+    color: #ecedec;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 30px;
+    letter-spacing: -3px; }
+    .main-page header h2 span {
+      font-family: Segoeuil, sans-serif;
+      font-weight: 400;
+      letter-spacing: normal; }
+  .main-page header .form label {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Segoeuil, sans-serif;
+    color: #bbbcba; }
+  .main-page header .form p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Segoeuil, sans-serif;
+    color: #ececeb;
+    margin: 45px 0; }
+  .main-page header .form .form-control {
+    background-color: #1f211c;
+    border-radius: 0;
+    border: 0;
+    height: 55px;
+    margin-bottom: 20px; }
+  .main-page header .form button {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #b30013;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 0;
+    height: 55px;
+    font-size: 22px;
+    font-weight: 900; }
+
+.main-page .navbar-main {
+  border: none;
+  border-radius: 0;
+  background: url("../images/nav-background.png") no-repeat;
+  background-size: 100% 100%;
+  min-height: 46px;
+  margin-bottom: 0; }
+  .main-page .navbar-main .navbar-header .logo {
+    display: block;
+    padding-left: 15px; }
+  .main-page .navbar-main .navbar-collapse ul li a {
+    font-family: 'Segoeuil', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    padding: 15px 10px;
+    transition: all 0.3s; }
+  .main-page .navbar-main #contact-form {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    height: 44px;
+    background: #2a2a2a; }
+    .main-page .navbar-main #contact-form .contact-form__wrapper {
+      border: 2px solid #3f3f3f;
+      position: relative; }
+      .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts {
+        float: left; }
+        .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .contact-form__contacts-items {
+          float: left; }
+          .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .contact-form__contacts-items .contact-form__contacts-item {
+            display: block;
+            float: left;
+            border-right: 2px solid #3f3f3f;
+            line-height: 20px;
+            padding: 9px 15px;
+            color: #fff;
+            font-family: 'Segoeuil', sans-serif;
+            font-size: 20px;
+            white-space: nowrap; }
+            .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .contact-form__contacts-items .contact-form__contacts-item img {
+              vertical-align: middle; }
+            .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .contact-form__contacts-items .contact-form__contacts-item:hover, .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .contact-form__contacts-items .contact-form__contacts-item:focus {
+              background-color: transparent;
+              text-decoration: none; }
+        .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .socials {
+          display: block;
+          float: left;
+          background: #000; }
+          .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .socials a {
+            display: block;
+            float: left;
+            padding: 0;
+            border-right: 2px solid #3f3f3f;
+            width: 44px;
+            height: 40px;
+            text-align: center; }
+            .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .socials a:hover {
+              text-decoration: none; }
+            .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .socials a i {
+              line-height: 40px;
+              color: #fff;
+              font-size: 32px; }
+          .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .socials .facebook {
+            vertical-align: bottom;
+            padding-right: 10px;
+            text-align: right; }
+            .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .socials .facebook i {
+              text-align: right; }
+      .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__form .inputs {
+        display: block;
+        float: left; }
+        .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__form .inputs input {
+          background: #000;
+          color: #fff;
+          height: 40px;
+          border: none;
+          border-right: 2px solid #3f3f3f;
+          padding: 0 20px;
+          width: 240px;
+          font-family: 'Segoeuil', sans-serif;
+          font-size: 20px; }
+      .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__form .subscribe-btn {
+        display: block;
+        float: left;
+        padding: 0 22px;
+        font-family: 'Seguibl', sans-serif;
+        color: #fff;
+        letter-spacing: -1px;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        border: none;
+        line-height: 40px;
+        background: #b30013; }
+
+@media screen and (max-width: 1279px) {
+  .main-page .navbar-main #contact-form {
+    background: rgba(0, 0, 0, 0.5);
+    height: auto;
+    min-height: 44px; }
+    .main-page .navbar-main #contact-form .contact-form__wrapper {
+      text-align: center; }
+      .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts, .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__form {
+        float: none !important;
+        display: inline-block; } }
+
+@media screen and (max-width: 992px) {
+  .main-page .navbar-main {
+    background: url("../../images/nav-background-xs.png") no-repeat;
+    background-size: 100% auto; }
+    .main-page .navbar-main .navbar-header {
+      padding-bottom: 40px; }
+    .main-page .navbar-main .navbar-collapse ul li a {
+      font-size: 43px;
+      padding: 5px;
+      line-height: 1.4em;
+      vertical-align: top; }
+    .main-page .navbar-main .navbar-collapse.collapse {
+      display: none !important;
+      position: relative; }
+    .main-page .navbar-main .navbar-collapse.collapse.in {
+      display: block !important; }
+    .main-page .navbar-main .navbar-header {
+      width: 100%; }
+      .main-page .navbar-main .navbar-header .navbar-toggle {
+        display: block;
+        border-color: transparent;
+        z-index: 999; }
+        .main-page .navbar-main .navbar-header .navbar-toggle:hover, .main-page .navbar-main .navbar-header .navbar-toggle:focus {
+          background-color: transparent; }
+        .main-page .navbar-main .navbar-header .navbar-toggle .icon-bar {
+          background-color: #fff;
+          height: 5px;
+          width: 50px;
+          margin-bottom: 5px; }
+    .main-page .navbar-main .nav {
+      float: none !important;
+      margin-left: -15px; }
+    .main-page .navbar-main .nav > li {
+      display: block;
+      position: relative;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      margin-bottom: 3px; }
+    .main-page .navbar-main #contact-form {
+      background: transparent;
+      display: block;
+      position: relative;
+      top: 0;
+      padding: 55px 0 105px; }
+      .main-page .navbar-main #contact-form .contact-form__wrapper {
+        text-align: center;
+        border: transparent; }
+        .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts, .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__form {
+          float: none !important;
+          display: block; }
+        .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts {
+          float: none; }
+          .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .contact-form__contacts-items {
+            float: none;
+            margin: 0 0 20px; }
+            .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .contact-form__contacts-items .contact-form__contacts-item {
+              display: inline-block;
+              float: none;
+              border-right: none;
+              line-height: 28px;
+              font-size: 28px; }
+          .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .socials {
+            display: inline-block;
+            margin: 0 0 20px;
+            float: none;
+            text-align: center;
+            background: transparent; }
+            .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .socials a {
+              display: block;
+              margin-right: 5px;
+              padding: 0;
+              border-right: transparent;
+              width: 75px;
+              height: 75px;
+              text-align: center;
+              background: rgba(0, 0, 0, 0.9); }
+              .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .socials a i {
+                font-size: 54px;
+                line-height: 75px; }
+        .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__form {
+          max-width: 590px;
+          margin: 0 auto; }
+          .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__form .inputs {
+            display: block;
+            float: none;
+            margin-bottom: 5px; }
+            .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__form .inputs input {
+              height: 65px;
+              border-right: none;
+              padding: 0 20px;
+              width: 100%;
+              font-size: 28px; }
+          .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__form .subscribe-btn {
+            display: block;
+            width: 100%;
+            float: none;
+            font-size: 28px;
+            text-align: center;
+            border: none;
+            line-height: 65px; } }
+
+@media screen and (max-width: 600px) {
+  .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__contacts .contact-form__contacts-items .contact-form__contacts-item {
+    line-height: 20px;
+    font-size: 20px; } }
+
+.main-page #hero {
+  background: url("../images/hero-bg.png") no-repeat;
+  background-size: 100% 100%;
+  min-height: 785px;
+  display: block;
+  width: 100%;
+  text-align: center; }
+  .main-page #hero:before {
+    content: "";
+    display: inline-block;
+    min-height: inherit;
+    height: 100%;
+    vertical-align: middle; }
+  .main-page #hero .caption {
+    display: inline-block;
+    max-width: 710px;
+    width: 100%;
+    background: #000;
+    padding: 17px 22px;
+    color: #fff;
+    vertical-align: middle; }
+    .main-page #hero .caption h1 {
+      font-size: 35px;
+      margin: 0;
+      font-family: 'Segoeuil', sans-serif; }
+    .main-page #hero .caption .sign {
+      float: right;
+      font-family: 'Seguili', sans-serif;
+      font-size: 23px; }
+
+.main-page #about {
+  padding: 85px 0 50px; }
+  .main-page #about .heading {
+    margin-bottom: 65px;
+    margin-top: -20px;
+    font-size: 95px;
+    font-family: 'Seguibl', sans-serif;
+    color: #ccc;
+    text-transform: uppercase; }
+  .main-page #about p {
+    margin-bottom: 15px;
+    font-family: 'Segoeuil', sans-serif;
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: 400; }
+  .main-page #about .about-block {
+    max-width: 255px;
+    width: 100%;
+    margin: 0 auto 25px; }
+    .main-page #about .about-block .about-block_img {
+      display: block;
+      width: 100%; }
+    .main-page #about .about-block .about_content-btn__cut-img span {
+      vertical-align: top !important; }
+    .main-page #about .about-block .about_content-btn {
+      margin-top: 1px;
+      position: relative;
+      display: block;
+      max-height: 40px;
+      padding: 5px;
+      text-align: center;
+      background: linear-gradient(#464646 50%, #626262 100%);
+      transition: all 0.5s; }
+      .main-page #about .about-block .about_content-btn span {
+        font-size: 18px;
+        font-family: 'Seguili', sans-serif;
+        color: #fff;
+        vertical-align: middle;
+        line-height: 30px; }
+      .main-page #about .about-block .about_content-btn img {
+        vertical-align: middle;
+        margin-left: 6px; }
+      .main-page #about .about-block .about_content-btn:before, .main-page #about .about-block .about_content-btn:after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        height: 20px;
+        width: 23px; }
+      .main-page #about .about-block .about_content-btn:before {
+        left: -23px;
+        background: url("../../images/shadow-left-triangle.png") no-repeat; }
+      .main-page #about .about-block .about_content-btn:after {
+        right: -23px;
+        background: url("../../images/shadow-right-triangle.png") no-repeat; }
+      .main-page #about .about-block .about_content-btn:hover {
+        text-decoration: none;
+        background: linear-gradient(#626262 50%, #464646 100%); }
+    .main-page #about .about-block ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .main-page #about .about-block ul li {
+        font-family: 'GothamGTH', sans-serif;
+        font-size: 15px;
+        line-height: 1.2em;
+        font-weight: 400; }
+  .main-page #about .custom-arrow {
+    display: block; }
+
+.main-page #presentation-options .presentation-options__block {
+  min-height: 350px;
+  padding: 20px; }
+  .main-page #presentation-options .presentation-options__block .presentation-options__title .invisible {
+    visibility: hidden; }
+  .main-page #presentation-options .presentation-options__block .presentation-options__title {
+    position: relative;
+    font-size: 28px;
+    line-height: 28px;
+    color: #313131;
+    margin: 0 0 5px;
+    padding-bottom: 10px;
+    text-transform: uppercase; }
+    .main-page #presentation-options .presentation-options__block .presentation-options__title .bold {
+      font-family: 'Seguibl', sans-serif;
+      letter-spacing: -2px; }
+    .main-page #presentation-options .presentation-options__block .presentation-options__title .light {
+      font-family: 'Segoeuil', sans-serif; }
+    .main-page #presentation-options .presentation-options__block .presentation-options__title:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 88%;
+      height: 1px;
+      background: #ccc; }
+  .main-page #presentation-options .presentation-options__block .subheading-light, .main-page #presentation-options .presentation-options__block .subheading-medium, .main-page #presentation-options .presentation-options__block .subheading-bold {
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Segoeuil', sans-serif;
+    text-transform: uppercase;
+    color: #313131; }
+  .main-page #presentation-options .presentation-options__block .subheading-light .light-grey {
+    color: #b7b7b7; }
+  .main-page #presentation-options .presentation-options__block .subheading-bold .bold {
+    font-family: 'Seguibl', sans-serif;
+    letter-spacing: -2px;
+    font-size: 16px;
+    margin-right: 2px; }
+  .main-page #presentation-options .presentation-options__block .price-block {
+    font-size: 42px;
+    font-family: 'Segoeuil', sans-serif;
+    margin-bottom: 10px; }
+    .main-page #presentation-options .presentation-options__block .price-block .step {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 25px;
+      color: #fff; }
+    .main-page #presentation-options .presentation-options__block .price-block .price {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 80px; }
+      .main-page #presentation-options .presentation-options__block .price-block .price .decimals {
+        font-size: 22px; }
+  .main-page #presentation-options .presentation-options__block .presentation-list {
+    margin: 0 0 50px;
+    padding: 10px;
+    list-style: none; }
+    .main-page #presentation-options .presentation-options__block .presentation-list li > div {
+      line-height: 1em; }
+    .main-page #presentation-options .presentation-options__block .presentation-list li {
+      position: relative;
+      padding-left: 40px;
+      font-family: 'Segoeuil', sans-serif;
+      font-size: 18px;
+      line-height: 34px;
+      display: block;
+      margin-bottom: 5px; }
+      .main-page #presentation-options .presentation-options__block .presentation-list li .number {
+        font-family: 'Seguibl', sans-serif;
+        letter-spacing: -2px;
+        font-size: 19px; }
+      .main-page #presentation-options .presentation-options__block .presentation-list li:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url("../../images/checked.png") no-repeat;
+        height: 34px;
+        width: 35px; }
+  .main-page #presentation-options .presentation-options__block .delivery-time-estimate {
+    padding: 0 0 0 50px;
+    font-family: 'Segoeuil', sans-serif;
+    font-size: 18px;
+    color: #313131; }
+    .main-page #presentation-options .presentation-options__block .delivery-time-estimate h3 {
+      font-size: 36px;
+      line-height: 1em;
+      margin: 5px 0 15px; }
+    .main-page #presentation-options .presentation-options__block .delivery-time-estimate p {
+      margin: 0; }
+    .main-page #presentation-options .presentation-options__block .delivery-time-estimate .delivery-time-estimate_btn {
+      display: inline-block;
+      padding: 2px 10px;
+      border: 1px solid #959595;
+      color: #313131;
+      text-transform: uppercase; }
+      .main-page #presentation-options .presentation-options__block .delivery-time-estimate .delivery-time-estimate_btn .bold {
+        color: #959595;
+        font-family: 'Seguibl', sans-serif;
+        margin-right: 3px; }
+      .main-page #presentation-options .presentation-options__block .delivery-time-estimate .delivery-time-estimate_btn:hover, .main-page #presentation-options .presentation-options__block .delivery-time-estimate .delivery-time-estimate_btn:focus {
+        text-decoration: none; }
+
+.main-page #presentation-options .presentation-options__block-1 {
+  background: url("../../images/content-arrow-block_left.png") top left no-repeat; }
+  .main-page #presentation-options .presentation-options__block-1 .price-block .price {
+    color: #989898; }
+
+.main-page #presentation-options .presentation-options__block-2 {
+  background: url("../../images/content-arrow-block_center.png") top left no-repeat; }
+  .main-page #presentation-options .presentation-options__block-2 .price-block .price {
+    color: #5e5e5e; }
+  .main-page #presentation-options .presentation-options__block-2 .delivery-time-estimate .delivery-time-estimate_btn {
+    border: 1px solid #535353;
+    color: #535353; }
+    .main-page #presentation-options .presentation-options__block-2 .delivery-time-estimate .delivery-time-estimate_btn .bold {
+      color: #535353; }
+
+.main-page #presentation-options .presentation-options__block-3 {
+  background: url("../../images/content-arrow-block_right.png") top left no-repeat; }
+  .main-page #presentation-options .presentation-options__block-3 .price-block .price {
+    color: #c00000; }
+  .main-page #presentation-options .presentation-options__block-3 .delivery-time-estimate .delivery-time-estimate_btn {
+    border: 1px solid #c00000;
+    color: #c00000; }
+    .main-page #presentation-options .presentation-options__block-3 .delivery-time-estimate .delivery-time-estimate_btn .bold {
+      color: #c00000; }
+
+.main-page #portfolio {
+  padding-top: 100px; }
+  .main-page #portfolio img {
+    margin-bottom: -18px; }
+
+.main-page footer {
+  padding: 85px 0 65px;
+  background: #000;
+  color: #5f5f5f;
+  font-family: 'Segoeuil', sans-serif;
+  font-size: 18px; }
+  .main-page footer .who-is-ko {
+    padding-left: 150px;
+    position: relative; }
+    .main-page footer .who-is-ko:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50px;
+      background: url("../../images/user-ico.png") no-repeat;
+      width: 128px;
+      height: 130px; }
+    .main-page footer .who-is-ko .title {
+      color: #2a2a2a;
+      font-family: 'Seguili', sans-serif;
+      font-size: 22px;
+      margin: 0 0 15px; }
+    .main-page footer .who-is-ko .heading {
+      font-family: 'Seguili', sans-serif;
+      font-size: 25px;
+      margin: 0 0 5px; }
+    .main-page footer .who-is-ko p {
+      margin: 0 0 20px;
+      font-size: 16px; }
+  .main-page footer .testimonial .title {
+    font-family: 'Seguili', sans-serif;
+    font-size: 18px;
+    color: #2a2a2a;
+    margin: 0 0 20px; }
+  .main-page footer .testimonial p {
+    margin: 0 0 20px;
+    font-family: 'Seguili', sans-serif;
+    font-size: 20px; }
+  .main-page footer .testimonial .about-client {
+    font-size: 14px;
+    font-family: 'Segoeuil', sans-serif;
+    line-height: 1.7em; }
+
+@media screen and (max-width: 992px) {
+  .main-page #about .heading {
+    font-size: 76px; }
+  .main-page #about p {
+    font-size: 26px;
+    max-width: 520px;
+    margin: 0 auto 30px; }
+  .main-page #about .custom-arrow-down {
+    margin-left: 50%;
+    margin-bottom: 20px; }
+  .main-page #about .about-block .title-xs {
+    font-size: 26px;
+    text-align: center; }
+  .main-page #about .about-block ul li {
+    font-size: 20px;
+    text-align: center;
+    color: #505050; }
+  .main-page #presentation-options {
+    background: #f2f2f2; }
+    .main-page #presentation-options .presentation-options__block {
+      margin-left: -37px;
+      margin-right: -37px;
+      background-position: 0 55px; }
+      .main-page #presentation-options .presentation-options__block .presentation-list-xs {
+        padding-left: 140px;
+        font-size: 26px;
+        font-family: 'Segoeuil', sans-serif;
+        line-height: 1.2em;
+        margin: 30px 0; }
+        .main-page #presentation-options .presentation-options__block .presentation-list-xs span {
+          font-family: 'Seguibl', sans-serif; }
+      .main-page #presentation-options .presentation-options__block .delivery-time-estimate {
+        padding-left: 140px;
+        font-size: 26px; }
+        .main-page #presentation-options .presentation-options__block .delivery-time-estimate h3 {
+          margin-bottom: 30px; }
+      .main-page #presentation-options .presentation-options__block .presentation-options__title {
+        font-size: 45px;
+        padding: 0;
+        margin: 30px 0 60px;
+        text-align: center; }
+        .main-page #presentation-options .presentation-options__block .presentation-options__title:after {
+          background: transparent; }
+      .main-page #presentation-options .presentation-options__block .price-block .price {
+        color: #4b4b4b; }
+        .main-page #presentation-options .presentation-options__block .price-block .price .price__title {
+          text-transform: uppercase;
+          float: left; }
+          .main-page #presentation-options .presentation-options__block .price-block .price .price__title .light-grey {
+            color: #b7b7b7; }
+  .main-page footer .testimonial {
+    padding-left: 150px; } }
+
+@media screen and (max-width: 767px) {
+  .main-page #hero {
+    background: url("../../images/hero-bg-xs.png") no-repeat;
+    background-size: 100% 100%;
+    min-height: 1010px; }
+    .main-page #hero .caption {
+      max-width: 585px; } }
+
+@media screen and (max-width: 400px) {
+  .main-page .navbar-main {
+    background-size: cover; }
+  .main-page #hero {
+    min-height: 400px; }
+    .main-page #hero .caption {
+      max-width: 300px; }
+  .main-page #about {
+    overflow: hidden; }
+  .main-page footer .testimonial {
+    padding-left: 75px; }
+  .main-page footer .who-is-ko {
+    padding-left: 75px; }
+    .main-page footer .who-is-ko:before {
+      width: 64px;
+      height: 65px;
+      background-size: 64px 65px; } }
