@@ -18,6 +18,29 @@ body
   font-family: Seguibl, sans-serif
   height: 100%
 
+.custom-checkbox
+  margin: 0
+.custom-checkbox input[type="checkbox"]
+  display: none
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-btn
+  border: solid 1px #fff
+  color: #fff
+  background-color: transparent !important
+.custom-checkbox .checkbox-btn
+  display: block
+  width: 35px
+  height: 35px
+  margin: 0
+  background-color: transparent
+  border: solid 1px #fff
+  color: transparent
+  text-align: center
+  i
+    vertical-align: middle
+    line-height: 35px
+    font-size: 24px
+    font-weight: 700
+
 .main-page
   header
     display: none
@@ -59,6 +82,14 @@ body
         font-family: Segoeuil, sans-serif
         font-weight: 400
         letter-spacing: normal
+    p
+      font-size: 16px
+      text-align: center
+      font-family: 'Segoeuil', sans-serif
+      color: #ecedec
+      max-width: 390px
+      width: 100%
+      margin: 0 auto
     .form
       label
         font-size: 20px
@@ -88,6 +119,138 @@ body
         height: 55px
         font-size: 22px
         font-weight: 900
+        .btn-inner_wrap
+          float: left
+          margin-left: 10px
+          line-height: 40px
+          .custom-checkbox__text
+            display: inline-block
+            .custom-checkbox__text-btn
+              text-align: left
+        span
+          font-family: 'Segoeuil', sans-serif
+          font-weight: 400
+    .form-2
+      .form-2__col-1
+        padding-right: 60px
+      .form-2__col-2
+        padding-right: 20px
+        button
+          max-width: 520px
+      .custom-checkbox
+        float: left
+        margin-right: 5px
+        margin-bottom: 15px
+      .custom-checkbox__text
+        color: #dbdbdb
+        .custom-checkbox__text-btn
+          text-transform: none
+          font-size: 12px
+          line-height: 11px
+          font-family: 'Segoeuil', sans-serif
+          a
+            color: #dbdbdb
+            font-family: 'Seguibl', sans-serif
+            text-decoration: underline
+        .custom-checkbox__text-heading
+          font-family: 'Segoeuil', sans-serif
+          font-size: 20px
+          line-height: 18px
+          white-space: nowrap
+          span
+            font-weight: bold
+          .uppercase
+            text-transform: uppercase
+        .custom-checkbox__text-heading_single-row
+          display: inline-block
+          line-height: 35px
+        .custom-checkbox__text-subheading
+          font-family: 'Segoeuil', sans-serif
+          font-size: 16px
+          font-weight: 300
+          text-align: left
+      .form-title
+        font-size: 20px
+        font-family: 'Segoeuil', sans-serif
+        color: #ececeb
+        margin-bottom: 20px
+        a
+          color: #ececeb
+          text-decoration: underline
+      .btn-title
+        font-size: 20px
+        font-family: 'Segoeuil', sans-serif
+        color: #ececeb
+        margin: 10px 0
+        a
+          color: #ececeb
+          text-decoration: underline
+      .text
+        text-align: left
+        margin: 5px 0 10px
+        font-size: 18px
+        line-height: 1.2em
+      .subtitle
+        font-family: 'Seguili', sans-serif
+        font-size: 14px
+        line-height: 14px
+        color: #ececeb
+        margin-bottom: 14px
+      .upload-btn__wrap
+        position: relative
+        input[type='file']
+          display: none
+        .upload-btn
+          background-color: #000
+          margin: 0
+          color: #fff
+          text-transform: uppercase
+          width: 100%
+          border-radius: 0
+          height: 55px
+          line-height: 40px
+          font-size: 22px
+          font-weight: 900
+          span
+            font-family: 'Segoeuil', sans-serif
+            font-weight: 400
+      .btn-back_wrap
+        text-align: center
+        .btn-back
+          display: inline-block
+          font-size: 12px
+          font-family: 'Seguibl', sans-serif
+          color: #ececeb
+          text-transform: uppercase
+          margin: 15px 0
+          line-height: 23px
+    .step-3 > h2
+      text-align: center
+      margin-top: 0
+      margin-bottom: 30px
+    .form-3
+      max-width: 260px
+      width: 100%
+      margin: 0 auto
+      display: block
+      img
+        margin-bottom: 10px
+      textarea
+        padding: 10px
+        color: #ececeb
+        width: 100%
+        min-height: 115px
+        border: 1px solid #ececeb
+        background: transparent
+    .step-3 > p
+      max-width: 260px
+      text-align: center
+      font-size: 16px
+      font-weight: 500
+      font-family: Segoeuil, sans-serif
+      color: #ececeb
+      margin: 35px auto
+      text-decoration: underline
   .navbar-main
     border: none
     border-radius: 0
@@ -191,7 +354,7 @@ body
           .subscribe-btn
             display: block
             float: left
-            padding: 0 22px
+            padding: 0 20px
             font-family: 'Seguibl', sans-serif
             color: #fff
             letter-spacing: -1px
@@ -218,9 +381,10 @@ body
       background: url("../../images/nav-background-xs.png") no-repeat
       background-size: 100% auto
       .navbar-header
-        padding-bottom: 40px
+        //padding-bottom: 40px
       .navbar-collapse
         ul
+          padding-top: 40px
           li
             a
               font-size: 43px
@@ -612,6 +776,10 @@ body
 
 @media screen and (max-width: 992px)
   .main-page
+    header
+      .form-2
+        .form-2__col-2
+          padding-right: 60px
     #about
       .heading
         font-size: 76px
@@ -678,6 +846,12 @@ body
       min-height: 1010px
       .caption
         max-width: 585px
+
+@media screen and (max-width: 500px)
+  header
+    .form-2
+      .form-2__col-2, .form-2__col-1
+        padding-right: 0
 
 @media screen and (max-width: 400px)
   .main-page

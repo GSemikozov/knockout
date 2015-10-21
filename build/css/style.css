@@ -17,6 +17,32 @@ body {
   font-family: Seguibl, sans-serif;
   height: 100%; }
 
+.custom-checkbox {
+  margin: 0; }
+
+.custom-checkbox input[type="checkbox"] {
+  display: none; }
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-btn {
+  border: solid 1px #fff;
+  color: #fff;
+  background-color: transparent !important; }
+
+.custom-checkbox .checkbox-btn {
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  background-color: transparent;
+  border: solid 1px #fff;
+  color: transparent;
+  text-align: center; }
+  .custom-checkbox .checkbox-btn i {
+    vertical-align: middle;
+    line-height: 35px;
+    font-size: 24px;
+    font-weight: 700; }
+
 .main-page header {
   display: none; }
   .main-page header section {
@@ -56,6 +82,14 @@ body {
       font-family: Segoeuil, sans-serif;
       font-weight: 400;
       letter-spacing: normal; }
+  .main-page header p {
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Segoeuil', sans-serif;
+    color: #ecedec;
+    max-width: 390px;
+    width: 100%;
+    margin: 0 auto; }
   .main-page header .form label {
     font-size: 20px;
     font-weight: 500;
@@ -84,6 +118,137 @@ body {
     height: 55px;
     font-size: 22px;
     font-weight: 900; }
+    .main-page header .form button .btn-inner_wrap {
+      float: left;
+      margin-left: 10px;
+      line-height: 40px; }
+      .main-page header .form button .btn-inner_wrap .custom-checkbox__text {
+        display: inline-block; }
+        .main-page header .form button .btn-inner_wrap .custom-checkbox__text .custom-checkbox__text-btn {
+          text-align: left; }
+    .main-page header .form button span {
+      font-family: 'Segoeuil', sans-serif;
+      font-weight: 400; }
+  .main-page header .form-2 .form-2__col-1 {
+    padding-right: 60px; }
+  .main-page header .form-2 .form-2__col-2 {
+    padding-right: 20px; }
+    .main-page header .form-2 .form-2__col-2 button {
+      max-width: 520px; }
+  .main-page header .form-2 .custom-checkbox {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 15px; }
+  .main-page header .form-2 .custom-checkbox__text {
+    color: #dbdbdb; }
+    .main-page header .form-2 .custom-checkbox__text .custom-checkbox__text-btn {
+      text-transform: none;
+      font-size: 12px;
+      line-height: 11px;
+      font-family: 'Segoeuil', sans-serif; }
+      .main-page header .form-2 .custom-checkbox__text .custom-checkbox__text-btn a {
+        color: #dbdbdb;
+        font-family: 'Seguibl', sans-serif;
+        text-decoration: underline; }
+    .main-page header .form-2 .custom-checkbox__text .custom-checkbox__text-heading {
+      font-family: 'Segoeuil', sans-serif;
+      font-size: 20px;
+      line-height: 18px;
+      white-space: nowrap; }
+      .main-page header .form-2 .custom-checkbox__text .custom-checkbox__text-heading span {
+        font-weight: bold; }
+      .main-page header .form-2 .custom-checkbox__text .custom-checkbox__text-heading .uppercase {
+        text-transform: uppercase; }
+    .main-page header .form-2 .custom-checkbox__text .custom-checkbox__text-heading_single-row {
+      display: inline-block;
+      line-height: 35px; }
+    .main-page header .form-2 .custom-checkbox__text .custom-checkbox__text-subheading {
+      font-family: 'Segoeuil', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      text-align: left; }
+  .main-page header .form-2 .form-title {
+    font-size: 20px;
+    font-family: 'Segoeuil', sans-serif;
+    color: #ececeb;
+    margin-bottom: 20px; }
+    .main-page header .form-2 .form-title a {
+      color: #ececeb;
+      text-decoration: underline; }
+  .main-page header .form-2 .btn-title {
+    font-size: 20px;
+    font-family: 'Segoeuil', sans-serif;
+    color: #ececeb;
+    margin: 10px 0; }
+    .main-page header .form-2 .btn-title a {
+      color: #ececeb;
+      text-decoration: underline; }
+  .main-page header .form-2 .text {
+    text-align: left;
+    margin: 5px 0 10px;
+    font-size: 18px;
+    line-height: 1.2em; }
+  .main-page header .form-2 .subtitle {
+    font-family: 'Seguili', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    color: #ececeb;
+    margin-bottom: 14px; }
+  .main-page header .form-2 .upload-btn__wrap {
+    position: relative; }
+    .main-page header .form-2 .upload-btn__wrap input[type='file'] {
+      display: none; }
+    .main-page header .form-2 .upload-btn__wrap .upload-btn {
+      background-color: #000;
+      margin: 0;
+      color: #fff;
+      text-transform: uppercase;
+      width: 100%;
+      border-radius: 0;
+      height: 55px;
+      line-height: 40px;
+      font-size: 22px;
+      font-weight: 900; }
+      .main-page header .form-2 .upload-btn__wrap .upload-btn span {
+        font-family: 'Segoeuil', sans-serif;
+        font-weight: 400; }
+  .main-page header .form-2 .btn-back_wrap {
+    text-align: center; }
+    .main-page header .form-2 .btn-back_wrap .btn-back {
+      display: inline-block;
+      font-size: 12px;
+      font-family: 'Seguibl', sans-serif;
+      color: #ececeb;
+      text-transform: uppercase;
+      margin: 15px 0;
+      line-height: 23px; }
+  .main-page header .step-3 > h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px; }
+  .main-page header .form-3 {
+    max-width: 260px;
+    width: 100%;
+    margin: 0 auto;
+    display: block; }
+    .main-page header .form-3 img {
+      margin-bottom: 10px; }
+    .main-page header .form-3 textarea {
+      padding: 10px;
+      color: #ececeb;
+      width: 100%;
+      min-height: 115px;
+      border: 1px solid #ececeb;
+      background: transparent; }
+  .main-page header .step-3 > p {
+    max-width: 260px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Segoeuil, sans-serif;
+    color: #ececeb;
+    margin: 35px auto;
+    text-decoration: underline; }
 
 .main-page .navbar-main {
   border: none;
@@ -172,7 +337,7 @@ body {
       .main-page .navbar-main #contact-form .contact-form__wrapper .contact-form__form .subscribe-btn {
         display: block;
         float: left;
-        padding: 0 22px;
+        padding: 0 20px;
         font-family: 'Seguibl', sans-serif;
         color: #fff;
         letter-spacing: -1px;
@@ -198,13 +363,13 @@ body {
   .main-page .navbar-main {
     background: url("../../images/nav-background-xs.png") no-repeat;
     background-size: 100% auto; }
-    .main-page .navbar-main .navbar-header {
-      padding-bottom: 40px; }
-    .main-page .navbar-main .navbar-collapse ul li a {
-      font-size: 43px;
-      padding: 5px;
-      line-height: 1.4em;
-      vertical-align: top; }
+    .main-page .navbar-main .navbar-collapse ul {
+      padding-top: 40px; }
+      .main-page .navbar-main .navbar-collapse ul li a {
+        font-size: 43px;
+        padding: 5px;
+        line-height: 1.4em;
+        vertical-align: top; }
     .main-page .navbar-main .navbar-collapse.collapse {
       display: none !important;
       position: relative; }
@@ -577,6 +742,8 @@ body {
     line-height: 1.7em; }
 
 @media screen and (max-width: 992px) {
+  .main-page header .form-2 .form-2__col-2 {
+    padding-right: 60px; }
   .main-page #about .heading {
     font-size: 76px; }
   .main-page #about p {
@@ -636,6 +803,10 @@ body {
     min-height: 1010px; }
     .main-page #hero .caption {
       max-width: 585px; } }
+
+@media screen and (max-width: 500px) {
+  header .form-2 .form-2__col-2, header .form-2 .form-2__col-1 {
+    padding-right: 0; } }
 
 @media screen and (max-width: 400px) {
   .main-page .navbar-main {
