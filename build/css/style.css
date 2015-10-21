@@ -62,7 +62,7 @@ body {
   .main-page header .bg {
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: 100% 100%; }
   .main-page header .form-wrap {
     max-width: 475px;
     width: 100%;
@@ -134,7 +134,7 @@ body {
   .main-page header .form-2 .form-2__col-2 {
     padding-right: 20px; }
     .main-page header .form-2 .form-2__col-2 button {
-      max-width: 520px; }
+      width: 100%; }
   .main-page header .form-2 .custom-checkbox {
     float: left;
     margin-right: 5px;
@@ -825,3 +825,99 @@ body {
       width: 64px;
       height: 65px;
       background-size: 64px 65px; } }
+
+/* slider */
+.carousel-control-arrow{
+  border: 1px solid #000;
+  position: relative;
+}
+.carousel-control.right {
+  right: auto;
+  left: 0;
+  top: 170px;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  margin-top: -350px;
+  overflow: visible;
+}
+.carousel-inner>.item>img {
+  line-height: 1;
+  height: 366px;
+  width: 100%;
+}
+.carousel{
+  position: relative;
+  height: 334px;
+  width: 74%;
+  left: 48px;
+  z-index: 15;
+  top: -22px;
+  color: #313131;
+}
+.carousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: -170px;
+  z-index: 15;
+  width: 50%;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: left;
+  list-style: none;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width:57px;
+  height: 57px;
+  cursor: pointer;
+  background-color: #000;
+  border-radius: 0px;
+}
+.carousel-indicators .active {
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  border: 3px solid #a22d3e;
+  background-color: #000;
+}
+.carousel-indicators img{
+  display: block;
+  width: 54px;
+  height: 54px;
+}
+
+#carousel-example-generic .carousel {
+  position: relative;
+  height: 334px;
+  width: 86%;
+  left: 47px;
+  overflow: visible;
+  z-index: 15;
+  color: #313131;
+}
+
+.inside{
+  overflow: hidden;
+  width: 555px;
+  z-index: 999;
+}
+
+.carousel-fade .carousel-inner .item{
+  /*opacity: 0;
+  transition-property: opacity;*/
+}
+
+.carousel-fade .carousel-inner .active {
+  /*opacity: 1;*/
+  /*overflow: visible;*/
+}
