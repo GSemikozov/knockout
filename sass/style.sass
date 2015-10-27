@@ -21,7 +21,9 @@ body
 .custom-checkbox
   margin: 0
 .custom-checkbox input[type="checkbox"]
-  display: none
+  visibility: hidden
+  position: absolute
+  z-index: 1
 .custom-checkbox input[type="checkbox"]:checked + .checkbox-btn
   border: solid 1px #fff
   color: #fff
@@ -35,6 +37,8 @@ body
   border: solid 1px #fff
   color: transparent
   text-align: center
+  position: relative
+  z-index: 2
   i
     vertical-align: middle
     line-height: 35px
@@ -46,6 +50,39 @@ body
     display: none
     section
       position: relative
+      form
+        .input-label
+          position: relative
+      .help-inline-error
+        color: #ecd40a
+        font-size: 16px
+      .error-color
+        color: #ecd40a !important
+      .checkbox-label
+        &.error-color
+          position: relative
+          &:before
+            content: ''
+            position: absolute
+            left: -30px
+            top: -5px
+            background: url("../../images/error-ico.png") no-repeat
+            background-size: 30px 30px
+            width: 30px
+            height: 30px
+      .success-color
+        color: green !important
+      .label-error-star
+        display: none
+      .control-group
+        position: relative
+        span
+          &.help-inline-error
+            position: absolute
+            top: -12px
+            left: -30px
+            img
+              margin-top: 10px
       #close
         cursor: pointer
         position: absolute
@@ -123,6 +160,8 @@ body
           float: left
           margin-left: 10px
           line-height: 40px
+          .custom-checkbox
+            margin-bottom: 0
           .custom-checkbox__text
             display: inline-block
             .custom-checkbox__text-btn
@@ -131,6 +170,8 @@ body
           font-family: 'Segoeuil', sans-serif
           font-weight: 400
     .form-2
+      .custom-checkbox .help-inline-error
+        display: none !important
       .form-2__col-1
         padding-right: 60px
       .form-2__col-2
@@ -242,6 +283,21 @@ body
         min-height: 115px
         border: 1px solid #ececeb
         background: transparent
+      .paypal-form-table
+        font-family: 'Segoeuil', sans-serif
+        background: #f3f3f3
+        color: #333333
+        width: 100%
+        margin-bottom: 30px
+        .heading
+          width: 100%
+          background: #dee3e7
+        th
+          padding: 10px
+        td
+          padding: 20px 20px 10px 20px
+          select
+            width: 100%
     .step-3 > p
       max-width: 260px
       text-align: center
@@ -759,7 +815,6 @@ body
         margin: 0 0 20px
         font-size: 16px
     .testimonial
-
       .title
         font-family: 'Seguili', sans-serif
         font-size: 18px
@@ -773,6 +828,28 @@ body
         font-size: 14px
         font-family: 'Segoeuil', sans-serif
         line-height: 1.7em
+  .carousel-fade
+    .carousel-inner
+      .item
+        transition-property: opacity
+        img
+          width: 100%
+      .item,
+      .active.left,
+      .active.right
+        opacity: 0
+      .active,
+      .next.left,
+      .prev.right
+        opacity: 1
+      .next,
+      .prev,
+      .active.left,
+      .active.right
+        left: 0
+        transform: translate3d(0, 0, 0)
+    .carousel-control
+      z-index: 2
 
 @media screen and (max-width: 992px)
   .main-page

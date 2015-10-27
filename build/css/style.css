@@ -21,7 +21,9 @@ body {
   margin: 0; }
 
 .custom-checkbox input[type="checkbox"] {
-  display: none; }
+  visibility: hidden;
+  position: absolute;
+  z-index: 1; }
 
 .custom-checkbox input[type="checkbox"]:checked + .checkbox-btn {
   border: solid 1px #fff;
@@ -36,7 +38,9 @@ body {
   background-color: transparent;
   border: solid 1px #fff;
   color: transparent;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  z-index: 2; }
   .custom-checkbox .checkbox-btn i {
     vertical-align: middle;
     line-height: 35px;
@@ -47,6 +51,36 @@ body {
   display: none; }
   .main-page header section {
     position: relative; }
+    .main-page header section form .input-label {
+      position: relative; }
+    .main-page header section .help-inline-error {
+      color: #ecd40a;
+      font-size: 16px; }
+    .main-page header section .error-color {
+      color: #ecd40a !important; }
+    .main-page header section .checkbox-label.error-color {
+      position: relative; }
+      .main-page header section .checkbox-label.error-color:before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: -5px;
+        background: url("../../images/error-ico.png") no-repeat;
+        background-size: 30px 30px;
+        width: 30px;
+        height: 30px; }
+    .main-page header section .success-color {
+      color: green !important; }
+    .main-page header section .label-error-star {
+      display: none; }
+    .main-page header section .control-group {
+      position: relative; }
+      .main-page header section .control-group span.help-inline-error {
+        position: absolute;
+        top: -12px;
+        left: -30px; }
+        .main-page header section .control-group span.help-inline-error img {
+          margin-top: 10px; }
     .main-page header section #close {
       cursor: pointer;
       position: absolute;
@@ -122,6 +156,8 @@ body {
       float: left;
       margin-left: 10px;
       line-height: 40px; }
+      .main-page header .form button .btn-inner_wrap .custom-checkbox {
+        margin-bottom: 0; }
       .main-page header .form button .btn-inner_wrap .custom-checkbox__text {
         display: inline-block; }
         .main-page header .form button .btn-inner_wrap .custom-checkbox__text .custom-checkbox__text-btn {
@@ -129,6 +165,8 @@ body {
     .main-page header .form button span {
       font-family: 'Segoeuil', sans-serif;
       font-weight: 400; }
+  .main-page header .form-2 .custom-checkbox .help-inline-error {
+    display: none !important; }
   .main-page header .form-2 .form-2__col-1 {
     padding-right: 60px; }
   .main-page header .form-2 .form-2__col-2 {
@@ -240,6 +278,21 @@ body {
       min-height: 115px;
       border: 1px solid #ececeb;
       background: transparent; }
+    .main-page header .form-3 .paypal-form-table {
+      font-family: 'Segoeuil', sans-serif;
+      background: #f3f3f3;
+      color: #333333;
+      width: 100%;
+      margin-bottom: 30px; }
+      .main-page header .form-3 .paypal-form-table .heading {
+        width: 100%;
+        background: #dee3e7; }
+      .main-page header .form-3 .paypal-form-table th {
+        padding: 10px; }
+      .main-page header .form-3 .paypal-form-table td {
+        padding: 20px 20px 10px 20px; }
+        .main-page header .form-3 .paypal-form-table td select {
+          width: 100%; }
   .main-page header .step-3 > p {
     max-width: 260px;
     text-align: center;
@@ -741,6 +794,32 @@ body {
     font-family: 'Segoeuil', sans-serif;
     line-height: 1.7em; }
 
+.main-page .carousel-fade .carousel-inner .item {
+  transition-property: opacity; }
+  .main-page .carousel-fade .carousel-inner .item img {
+    width: 100%; }
+
+.main-page .carousel-fade .carousel-inner .item,
+.main-page .carousel-fade .carousel-inner .active.left,
+.main-page .carousel-fade .carousel-inner .active.right {
+  opacity: 0; }
+
+.main-page .carousel-fade .carousel-inner .active,
+.main-page .carousel-fade .carousel-inner .next.left,
+.main-page .carousel-fade .carousel-inner .prev.right {
+  opacity: 1; }
+
+.main-page .carousel-fade .carousel-inner .next,
+.main-page .carousel-fade .carousel-inner .prev,
+.main-page .carousel-fade .carousel-inner .active.left,
+.main-page .carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+
+.main-page .carousel-fade .carousel-control {
+  z-index: 2; }
+
 @media screen and (max-width: 992px) {
   .main-page header .form-2 .form-2__col-2 {
     padding-right: 60px; }
@@ -825,99 +904,3 @@ body {
       width: 64px;
       height: 65px;
       background-size: 64px 65px; } }
-
-/* slider */
-.carousel-control-arrow{
-  border: 1px solid #000;
-  position: relative;
-}
-.carousel-control.right {
-  right: auto;
-  left: 0;
-  top: 170px;
-}
-
-.carousel-inner {
-  position: relative;
-  width: 100%;
-  margin-top: -350px;
-  overflow: visible;
-}
-.carousel-inner>.item>img {
-  line-height: 1;
-  height: 366px;
-  width: 100%;
-}
-.carousel{
-  position: relative;
-  height: 334px;
-  width: 74%;
-  left: 48px;
-  z-index: 15;
-  top: -22px;
-  color: #313131;
-}
-.carousel-control {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 0;
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: -170px;
-  z-index: 15;
-  width: 50%;
-  padding-left: 0;
-  margin-left: -30%;
-  text-align: left;
-  list-style: none;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width:57px;
-  height: 57px;
-  cursor: pointer;
-  background-color: #000;
-  border-radius: 0px;
-}
-.carousel-indicators .active {
-  width: 60px;
-  height: 60px;
-  margin: 0;
-  border: 3px solid #a22d3e;
-  background-color: #000;
-}
-.carousel-indicators img{
-  display: block;
-  width: 54px;
-  height: 54px;
-}
-
-#carousel-example-generic .carousel {
-  position: relative;
-  height: 334px;
-  width: 86%;
-  left: 47px;
-  overflow: visible;
-  z-index: 15;
-  color: #313131;
-}
-
-.inside{
-  overflow: hidden;
-  width: 555px;
-  z-index: 999;
-}
-
-.carousel-fade .carousel-inner .item{
-  /*opacity: 0;
-  transition-property: opacity;*/
-}
-
-.carousel-fade .carousel-inner .active {
-  /*opacity: 1;*/
-  /*overflow: visible;*/
-}
