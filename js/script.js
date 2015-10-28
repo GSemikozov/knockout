@@ -10,6 +10,9 @@ jQuery().ready(function() {
     $('#contact').on('click', function() {
         $('#contact-form').slideToggle('slow');
     });
+    $('#another-payment-method').on('click', function() {
+        $('#another-user-query').slideToggle('slow');
+    });
 
     //slider
     var myCarousel = $('#myCarousel'),
@@ -79,21 +82,22 @@ jQuery().ready(function() {
                 email: true,
                 maxlength: 100
             },
-            'checkboxes[]': {
-                required: true,
-                minlength: 1
-            },
-            'checkboxes2[]': {
+            'radio1': {
                 required: true
             },
-            'checkboxes3[]': {
+            'radio2': {
+                required: true
+            },
+            'radio3': {
                 required: true
             },
             'upload-file': {
                 required: true
+                //accept: "documents/word,documents/powerpoint"
             },
             'upload-assets': {
                 required: true
+                //accept: "image/jpeg, image/png"
             },
             os0: {
                 required: true
@@ -114,25 +118,32 @@ jQuery().ready(function() {
                 maxlength: "",
                 email: "wrong format"
             },
-            'checkboxes[]': {
+            'radio1': {
                 required: ""
             },
-            'checkboxes2[]': {
+            'radio2': {
                 required: ""
             },
-            'checkboxes3[]': {
+            'radio3': {
                 required: ""
             },
             'upload-file': {
-                required: "ERROR - SOME REQUIRED FIELDS ARE EMPTY"
+                required: ""
             },
             'upload-assets': {
-                required: "warning: you have  not attached any content / assets, you may still proceed, and email those through latter"
+                required: ""
             },
             os0: {
                 required: ""
             }
         },
+        /*errorPlacement: function(error, element) {
+            if ( element.is(":radio") ) {
+                error.appendTo( element.parents('.container') );
+            } else { // This is the default behavior
+                error.insertAfter( element );
+            }
+        },*/
         highlight: function(label) {
             //$(label).closest('.control-group')
             //.find('.label-error-star').css('display', 'inline-block');
@@ -140,14 +151,16 @@ jQuery().ready(function() {
                 .find('.input-label').addClass('error-color');
 
             $(label).closest('.form-2__col-1')
-                .find('.checkbox-label').addClass('error-color').find('a').addClass('error-color')
-                .closest('.custom-checkbox').find('input[type="checkbox"]').removeClass('valid');
+                .find('.checkbox-label').addClass('error-color').find('a').addClass('error-color');
             $(label).closest('.form-2__col-1')
                 .find('.input-label').addClass('error-color')
                 .find('a').addClass('error-color');
 
             $(label).closest('.form-2__col-2')
                 .find('.checkbox-label').addClass('error-color');
+
+            $(label).closest('.upload-btn__wrap').find('.upload-btn').addClass('error-color');
+
 
             //$(label).closest('.control-group')
             //.find('.select-label').addClass('error-color');
@@ -156,50 +169,64 @@ jQuery().ready(function() {
             label.closest('.control-group')
                 .find('.input-label').addClass('success-color');
 
-            /*label.closest('.form-2__col-1')
+            $(label).closest('.upload-btn__wrap').find('.upload-btn').removeClass('success-color');
+
+            label.closest('.form-2__col-1')
              .find('.checkbox-label').addClass('success-color')
-             .find('a').addClass('success-color');*/
+             .find('a').addClass('success-color');
         }
     });
 
     $(".open1").click(function() {
         if (v.form()) {
-            $(".frm").hide("fast");
-            $("#sf2").show("slow");
+            $(".frm").fadeOut("fast");
+            $("#sf2").fadeIn("slow");
         }
     });
 
     $(".open2").click(function() {
         if (v.form()) {
-            $(".frm").hide("fast");
-            $("#sf3").show("slow");
+            $(".frm").fadeOut("fast");
+            $("#sf3").fadeIn("slow");
         }
     });
 
     $(".open3").click(function() {
         if (v.form()) {
-            $("#loader").show();
             setTimeout(function(){
-                $("#basicform").html('<section class="success conteiner"><h1 class="text-center">done, check your inbox</h1><p>You can excpect a mail from us in the next couple of minutes if there seems to bea delay dont hesitate to email us at work@khockoutzero.com </p></section>');
+                $("#basicform").html('<section class="success container"><h1 class="text-center">done, check your inbox</h1><p style="padding-bottom: 50px;">You can excpect a mail from us in the next couple of minutes if there seems to bea delay dont hesitate to email us at work@khockoutzero.com </p></section>');
             }, 1000);
             return false;
         } else {
-            $("#loader").show();
             setTimeout(function(){
-                $("#basicform").html('<section class="cancel conteiner"><h1 class="text-center">yikes! - change of heart?</h1><p>No problem we will be here when you get back </p></section>');
+                $("#basicform").html('<section class="cancel container"><h1 class="text-center">yikes! - change of heart?</h1><p style="padding-bottom: 50px;">No problem we will be here when you get back </p></section>');
+            }, 1000);
+            return false;
+        }
+    });
+
+    $("#submit-query").click(function() {
+        if (v.form()) {
+            setTimeout(function(){
+                $("#basicform").html('<section class="success container"><h1 class="text-center">done, check your inbox</h1><p style="padding-bottom: 50px;">You can excpect a mail from us in the next couple of minutes if there seems to bea delay dont hesitate to email us at work@khockoutzero.com </p></section>');
+            }, 1000);
+            return false;
+        } else {
+            setTimeout(function(){
+                $("#basicform").html('<section class="cancel container"><h1 class="text-center">yikes! - change of heart?</h1><p style="padding-bottom: 50px;">No problem we will be here when you get back </p></section>');
             }, 1000);
             return false;
         }
     });
 
     $(".back2").click(function() {
-        $(".frm").hide("fast");
-        $("#sf1").show("slow");
+        $(".frm").fadeOut("fast");
+        $("#sf1").fadeIn("slow");
     });
 
     $(".back3").click(function() {
-        $(".frm").hide("fast");
-        $("#sf2").show("slow");
+        $(".frm").fadeOut("fast");
+        $("#sf2").fadeIn("slow");
     });
 
 });

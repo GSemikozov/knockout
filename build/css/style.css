@@ -20,12 +20,12 @@ body {
 .custom-checkbox {
   margin: 0; }
 
-.custom-checkbox input[type="checkbox"] {
+.custom-checkbox input[type="checkbox"], .custom-checkbox input[type="radio"] {
   visibility: hidden;
   position: absolute;
   z-index: 1; }
 
-.custom-checkbox input[type="checkbox"]:checked + .checkbox-btn {
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-btn, .custom-checkbox input[type="radio"]:checked + .checkbox-btn {
   border: solid 1px #fff;
   color: #fff;
   background-color: transparent !important; }
@@ -70,7 +70,7 @@ body {
         width: 30px;
         height: 30px; }
     .main-page header section .success-color {
-      color: green !important; }
+      color: #fff !important; }
     .main-page header section .label-error-star {
       display: none; }
     .main-page header section .control-group {
@@ -106,6 +106,8 @@ body {
     text-transform: uppercase;
     font-size: 74px;
     letter-spacing: -3px; }
+    .main-page header h1.title {
+      margin-top: 70px; }
   .main-page header h2 {
     color: #ecedec;
     text-transform: uppercase;
@@ -152,6 +154,10 @@ body {
     height: 55px;
     font-size: 22px;
     font-weight: 900; }
+    .main-page header .form button:focus, .main-page header .form button:active {
+      outline: none;
+      box-shadow: none;
+      border: 1px solid transparent; }
     .main-page header .form button .btn-inner_wrap {
       float: left;
       margin-left: 10px;
@@ -171,8 +177,19 @@ body {
     padding-right: 60px; }
   .main-page header .form-2 .form-2__col-2 {
     padding-right: 20px; }
-    .main-page header .form-2 .form-2__col-2 button {
-      width: 100%; }
+    .main-page header .form-2 .form-2__col-2 .btn-container {
+      width: 100%;
+      background: #b30013;
+      padding: 10px 0; }
+      .main-page header .form-2 .form-2__col-2 .btn-container .btn-inner_wrap {
+        margin-left: 10px;
+        float: left; }
+        .main-page header .form-2 .form-2__col-2 .btn-container .btn-inner_wrap button {
+          height: auto;
+          line-height: 20px;
+          margin-top: 0; }
+        .main-page header .form-2 .form-2__col-2 .btn-container .btn-inner_wrap .custom-checkbox {
+          margin-bottom: 0; }
   .main-page header .form-2 .custom-checkbox {
     float: left;
     margin-right: 5px;
@@ -233,10 +250,17 @@ body {
     color: #ececeb;
     margin-bottom: 14px; }
   .main-page header .form-2 .upload-btn__wrap {
-    position: relative; }
+    position: relative;
+    height: 58px; }
     .main-page header .form-2 .upload-btn__wrap input[type='file'] {
-      display: none; }
+      position: relative;
+      z-index: 1;
+      visibility: hidden; }
     .main-page header .form-2 .upload-btn__wrap .upload-btn {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
       background-color: #000;
       margin: 0;
       color: #fff;
@@ -269,6 +293,8 @@ body {
     width: 100%;
     margin: 0 auto;
     display: block; }
+    .main-page header .form-3 #another-user-query {
+      display: none; }
     .main-page header .form-3 img {
       margin-bottom: 10px; }
     .main-page header .form-3 textarea {
@@ -301,6 +327,7 @@ body {
     font-family: Segoeuil, sans-serif;
     color: #ececeb;
     margin: 35px auto;
+    cursor: pointer;
     text-decoration: underline; }
 
 .main-page .navbar-main {
