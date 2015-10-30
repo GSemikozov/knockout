@@ -97,21 +97,32 @@ jQuery().ready(function() {
     });
     $('#arrow-right').on('click', function() {
 
-        //carouselLinkedProjects.find('li.active').removeClass('active').next().addClass('active');
 
-        var currentProject = carouselLinkedProjects.find('li.active > a').data('project');
+        if ($(".carousel-linked-projects li.active").next().length != 0)
+            carouselLinkedProjects.find('li.active').removeClass('active').next().addClass('active');
+        else {
+            carouselLinkedProjects.find('li.active').removeClass('active');
+            carouselLinkedProjects.find('li:first').addClass('active');
+        }
+        //return false;
+
+        //carouselLinkedProjects.find('li.active').removeClass('active').eq(next).addClass('active');
+
+        //carouselLinkedProjects.find('li.active').removeClass('active').next().addClass('active');
 
         //if (carouselLinkedProjects.find('li.active').is('.last-child')) {
             //$(this).removeClass('active').closest('ul').find(' li:first-child').addClass('active');
         //}
 
-        var $na = $('.indicator');
+        /*var $na = $('.indicator');
         (function _loop(idx) {
             $na.removeClass('active').eq(idx).addClass('active');
             setTimeout(function () {
                 _loop((idx + 1) % $na.length);
             }, 2000);
-        }(0));
+        }(0));*/
+
+       var currentProject = carouselLinkedProjects.find('li.active > a').data('project');
 
         myCarousel.find('.item').remove();
         $slides = allSlides.filter( function () {
@@ -120,7 +131,7 @@ jQuery().ready(function() {
         $slides.eq(0).addClass('active');
         //console.log(this, currentProject , $slides );
         myCarousel.find('.carousel-inner').append($slides);
-        //myCarousel.carousel("pause").removeData().carousel(0);
+        //myCarousel.carousel("pause").removeData().carousel(0);*/
 
     });
     /* AUTOPLAY NAV HIGHLIGHT */
