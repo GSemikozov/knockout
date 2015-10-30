@@ -104,23 +104,6 @@ jQuery().ready(function() {
             carouselLinkedProjects.find('li.active').removeClass('active');
             carouselLinkedProjects.find('li:first').addClass('active');
         }
-        //return false;
-
-        //carouselLinkedProjects.find('li.active').removeClass('active').eq(next).addClass('active');
-
-        //carouselLinkedProjects.find('li.active').removeClass('active').next().addClass('active');
-
-        //if (carouselLinkedProjects.find('li.active').is('.last-child')) {
-            //$(this).removeClass('active').closest('ul').find(' li:first-child').addClass('active');
-        //}
-
-        /*var $na = $('.indicator');
-        (function _loop(idx) {
-            $na.removeClass('active').eq(idx).addClass('active');
-            setTimeout(function () {
-                _loop((idx + 1) % $na.length);
-            }, 2000);
-        }(0));*/
 
        var currentProject = carouselLinkedProjects.find('li.active > a').data('project');
 
@@ -134,16 +117,6 @@ jQuery().ready(function() {
         //myCarousel.carousel("pause").removeData().carousel(0);*/
 
     });
-    /* AUTOPLAY NAV HIGHLIGHT */
-    // bind 'slid' function
-    /*myCarousel.bind('slid', function() {
-        // remove active class
-        carouselLinkedNav.find('.active').removeClass('active');
-        // get index of currently active item
-        var idx = myCarousel.find('item.active').index();
-        // select currently active item and add active class
-        $('.carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-    });*/
 
     // validate form on keyup and submit
     var v = jQuery("#basicform").validate({
