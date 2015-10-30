@@ -1,3 +1,40 @@
+//prototype method to add 5 days to current days
+Date.prototype.addDays = function(days) {
+    this.setDate(this.getDate() + parseInt(days));
+    return this;
+};
+
+//set Date with +5 Days time estimate from current Date
+function tData() {
+    var s;
+    var estimateDate = new Date();
+    estimateDate.addDays(5);
+    var y = estimateDate.getFullYear();
+    //var d = estimateDate.setDate(estimateDate.getDate() + 2);
+    var d = estimateDate.getDate();
+    var mon = estimateDate.getMonth();
+    switch (mon) {
+        case 0: s="Jan"; break;
+        case 1: s="Feb"; break;
+        case 2: s="Mar"; break;
+        case 3: s="Apr"; break;
+        case 4: s="May"; break;
+        case 5: s="Jun"; break;
+        case 6: s="Jul"; break;
+        case 7: s="Aug"; break;
+        case 8: s="Sep"; break;
+        case 9: s="Oct"; break;
+        case 10: s="Nov"; break;
+        case 11: s="Dec"; break;
+    }
+    var result = d + " " + s + " " + y;
+    var result2 = result;
+    var result3 = result;
+    document.getElementById('estimate-date').innerHTML = result;
+    document.getElementById('estimate-date2').innerHTML = result2;
+    document.getElementById('estimate-date3').innerHTML = result3;
+}
+
 jQuery().ready(function() {
 
     //common js for content buttons
@@ -13,6 +50,7 @@ jQuery().ready(function() {
     $('#another-payment-method').on('click', function() {
         $('#another-user-query').slideToggle('slow');
     });
+    tData();
 
     //slider
     var myCarousel = $('#myCarousel'),
@@ -56,6 +94,34 @@ jQuery().ready(function() {
         //myCarousel.carousel("pause").removeData().carousel(0);
 
         return false;
+    });
+    $('#arrow-right').on('click', function() {
+
+        //carouselLinkedProjects.find('li.active').removeClass('active').next().addClass('active');
+
+        var currentProject = carouselLinkedProjects.find('li.active > a').data('project');
+
+        //if (carouselLinkedProjects.find('li.active').is('.last-child')) {
+            //$(this).removeClass('active').closest('ul').find(' li:first-child').addClass('active');
+        //}
+
+        var $na = $('.indicator');
+        (function _loop(idx) {
+            $na.removeClass('active').eq(idx).addClass('active');
+            setTimeout(function () {
+                _loop((idx + 1) % $na.length);
+            }, 2000);
+        }(0));
+
+        myCarousel.find('.item').remove();
+        $slides = allSlides.filter( function () {
+            return $(this).data('project') == currentProject
+        });
+        $slides.eq(0).addClass('active');
+        //console.log(this, currentProject , $slides );
+        myCarousel.find('.carousel-inner').append($slides);
+        //myCarousel.carousel("pause").removeData().carousel(0);
+
     });
     /* AUTOPLAY NAV HIGHLIGHT */
     // bind 'slid' function
@@ -227,6 +293,53 @@ jQuery().ready(function() {
     $(".back3").click(function() {
         $(".frm").fadeOut("fast");
         $("#sf2").fadeIn("slow");
+    });
+
+    var f = jQuery(".contact-form__form").validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2,
+                maxlength: 16
+            },
+            email: {
+                required: true,
+                minlength: 2,
+                email: true,
+                maxlength: 100
+            }
+
+        },
+        errorElement: "span",
+        errorClass: "help-inline-error",
+        messages: {
+            name: {
+                required: "",
+                minlength: "",
+                maxlength: ""
+            },
+            email: {
+                required: "",
+                minlength: "",
+                maxlength: "",
+                email: ""
+            }
+        },
+        highlight: function(label) {
+            $(label).closest('.inputs').css('border-color', 'yellow');
+        },
+        success: function(input) {
+            $(input).css('border-color', 'white');
+        }
+    });
+
+    $("#subscribe-newslatter").click(function() {
+        if (f.form()) {
+            setTimeout(function(){
+                $(".contact-form__form").html('<section class="success text-center" style="color: #fff; padding-top: 10px;">done, check your inbox</section>');
+            }, 1000);
+            return false;
+        }
     });
 
 });
